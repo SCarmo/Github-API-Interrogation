@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="/stylesheet.css" rel="stylesheet" type="text/css">
+    <meta charset="utf-8">
+    <title>Github</title>
+  </head>
+  <body>
+    <nav>
+        <ul>
+            <li>
+              <li> <a href = '/'>Homepage</a></li>
+              <li> <a href = '/interrogate'>Interrogate</a></li>
+            </li>
+        </ul>
+    </nav>
+    <header>
+      <h1> Welcome <%=account.name%></h1>
+      <img src =<%=account.avatar_url%> />
+      <h3><%=JSON.stringify(account,null,5)%></h3>
+    </header>
+    <main>
+    </main>
+  </body>
+</html>

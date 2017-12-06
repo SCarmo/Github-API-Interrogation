@@ -1,0 +1,24 @@
+{
+  "name": "githubapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shane Carmody",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.2",
+    "cookie-session": "^2.0.0-beta.3",
+    "d3": "^4.12.0",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "hogan": "^1.0.2",
+    "mongoose": "^4.13.5",
+    "octonode": "^0.9.1",
+    "passport": "^0.4.0",
+    "passport-github2": "^0.1.11"
+  }
+}
