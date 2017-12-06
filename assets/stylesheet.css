@@ -1,5 +1,5 @@
 body{
-  background: #000000;
+  background: #ffffff;
   font-family: verdana;
   margin: 0;
 }
@@ -29,5 +29,5 @@ main, header{
   max-width: 960px;
   margin: 15px auto;
   padding: 0 5px;
-  color: #FFF;
+  color: #000;
 }
