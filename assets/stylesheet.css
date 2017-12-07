@@ -1,10 +1,10 @@
 body{
-  background: #ffffff;
+  background: #ffdab9;
   font-family: verdana;
   margin: 0;
 }
 nav{
-  background: #0000FF;
+  background: #b9deff;
   padding: 20px 10px
 }
 nav ul{
@@ -18,7 +18,7 @@ nav li{
   margin: 0 10px 0 0;
 }
 nav a{
-  color: #fff;
+  color: #000;
   font-size: 18px;
   background: rgba(255, 255, 255, 0.2);
   text-decoration: none;
@@ -30,4 +30,23 @@ main, header{
   margin: 15px auto;
   padding: 0 5px;
   color: #000;
+}
+.node {
+  cursor: pointer;
+}
+
+.node circle {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.node text {
+  font: 13px arial;
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
 }

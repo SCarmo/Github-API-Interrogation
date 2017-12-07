@@ -2,9 +2,20 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const github = require('octonode');
-
+const path = require('path');
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
-var client = github.client();
+const client = github.client();
+const file = require('./views/flare.json');
+
+var fetch = require('node-fetch');
+
+fetch('https://api.github.com/users/scarmo')
+    .then(function(res) {
+        return res.json();
+    }).then(function(json) {
+        console.log(json);
+    });
+
 app.set('view engine', 'ejs');
 
 app.use(express.static(__dirname + '/assets'));
@@ -14,12 +25,10 @@ app.get('/', function(req, res){
 })
 
 app.get('/interrogate', (req, res) => {
-  res.render('interrogate');
+
+  res.render('graph');
 });
 
-app.post('/interrogate',urlencodedParser, (req, res) => {
-  client.get('/users/'+req.body.account, {}, function (err, status, body, headers) {
-  res.render('github', {account: body});//JSON.stringify(body,null,5)
-});
-});
+app.use(express.static(__dirname + '/views'));
+
 app.listen(3000);
