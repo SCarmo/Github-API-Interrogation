@@ -5,16 +5,15 @@ const github = require('octonode');
 const path = require('path');
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
 const client = github.client();
-const file = require('./views/flare.json');
 
 var fetch = require('node-fetch');
 
-fetch('https://api.github.com/users/scarmo')
-    .then(function(res) {
-        return res.json();
-    }).then(function(json) {
-        console.log(json);
-    });
+// fetch('https://api.github.com/users/scarmo/repos')
+//     .then(function(res) {
+//         return res.json();
+//     }).then(function(json) {
+//         console.log(JSON.stringify(j));
+//     });
 
 app.set('view engine', 'ejs');
 
