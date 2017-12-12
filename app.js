@@ -32,8 +32,9 @@ function parse(body){
     if (err) throw err;
   });
 
+  // only displaying info on 4 repos as any more would be unreadable
   // for every repo
-  for(var i = 0; i < repos.length; i++) {
+  for(var i = 0; i < 4; i++) {
     str = "EA." + repos[i].name + ",\n";
     fs.appendFile(file, str, function (err) {
       if (err) throw err;
@@ -43,12 +44,16 @@ function parse(body){
     var val = JSON.parse(string);
 
     // for elements in a repo
-    for(var k = 0; k < 20; k++){
+    for(var k = 0; k < 72; k++){
       str = "EA." + repos[i].name + "." + keys[k] + ",\n";
       fs.appendFile(file, str, function (err) {
         if (err) throw err;
       });
-      str =  "EA." + repos[i].name + "." + keys[k] + "." +val[keys[k]] + ",1\n";
+      // csv files don't like urls so i'm replacing the "." with "#"
+      var find = '.';
+      var re = new RegExp(find, 'g');
+      if(val[keys[k]] != null)
+        str =  "EA." + repos[i].name + "." + keys[k] + "." +val[keys[k]].toString().replace(/\./gi,"#") + ",1\n";
       fs.appendFile(file, str, function (err) {
         if (err) throw err;
       });
@@ -93,7 +98,6 @@ app.get('/', function(req, res){
 })
 
 app.get('/interrogate', (req, res) => {
-
   res.render('graph');
 });
 

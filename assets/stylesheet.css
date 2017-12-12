@@ -8,7 +8,6 @@ nav{
   padding: 20px 10px
 }
 nav ul{
-  max-width: 960px;
   margin: 0 auto;
   padding: 0;
 }
@@ -26,9 +25,9 @@ nav a{
   display: block;
 }
 main, header{
-  max-width: 960px;
+
   margin: 15px auto;
-  padding: 0 5px;
+  padding-left: 30px;
   color: #000;
 }
 .node {
@@ -36,17 +35,31 @@ main, header{
 }
 
 .node circle {
-  fill: #fff;
-  stroke: steelblue;
-  stroke-width: 1.5px;
+  fill: #999;
 }
 
 .node text {
-  font: 13px arial;
+  font: 10px sans-serif;
+}
+
+.node--internal circle {
+  fill: #555;
+}
+
+.node--internal text {
+  text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
 }
 
 .link {
   fill: none;
-  stroke: #ccc;
+  stroke: #555;
+  stroke-opacity: 0.4;
   stroke-width: 1.5px;
+}
+
+.graphHead{
+  text-align: left;
+  padding-left: 30px;
+  font-size: 30px;
+  font-family: verdana;
 }
