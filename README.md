@@ -19,7 +19,8 @@ Then change into directory
 cd Github-API-Interrogation
 ```
 
-Install necessary dependencies
+Install necessary dependencies,
+make sure [node](https://nodejs.org/en/) & [npm](http://blog.npmjs.org/post/85484771375/how-to-install-npm) are installed
 ```
 npm install
 ```
